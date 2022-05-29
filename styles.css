@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
+
+body {
+	margin: 0;
+	font-size: 2em;
+	color: white;
+}
+button {
+	outline: none;
+	cursor: pointer;
+	border: none;
+	box-shadow: 3px 5px 0px 0px rgba(0, 0, 0, 0.75);
+}
+#counter {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+#end {
+	position: absolute;
+	min-width: 100%;
+	min-height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	visibility: hidden;
+}
+#end button {
+	background-color: red;
+	padding: 20px 50px 20px 50px;
+	font-family: inherit;
+	font-size: inherit;
+}
+#controlls {
+	position: absolute;
+	min-width: 100%;
+	min-height: 100%;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+#controlls div {
+	display: grid;
+	grid-template-columns: 50px 50px 50px;
+	grid-template-rows: auto auto;
+	grid-column-gap: 10px;
+	grid-row-gap: 10px;
+	margin-bottom: 20px;
+}
+#controlls button {
+	width: 100%;
+	background-color: white;
+	border: 1px solid lightgray;
+}
+#controlls button:first-of-type {
+	grid-column: 1/-1;
+}
+
+.background {
+	background-color: #242424;
+}
+
+.attachment {
+	content: " ";
+	position: absolute;
+	display: inline-flex;
+}
+
+.attachment-legs {
+	left: 60%;
+	top: 70%;
+}
+
+.attachment-weapon {
+	left: 34%;
+	top: 36%;
+}
+
+.attachment {
+	width: 3rem;
+	height: 3rem;
+	border: 1px solid grey;
+	cursor: pointer;
+}
+.attachment:hover .attachment__button-content {
+	margin: 5%;
+	height: 90%;
+	width: 90%;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+.attachment__button-content {
+	position: relative;
+	margin: 10%;
+	height: 80%;
+	width: 80%;
+	background-color: rgba(255, 255, 255, 0.1);
+	transition: background-color 0.15s ease, margin 0.15s ease, height 0.15s ease,
+		width 0.15s ease;
+}
+
+.add-sign-plus {
+	transition: transform 0.2s ease;
+}
+
+.add-sign {
+	color: lightgrey;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	font-size: 1.75rem;
+}
+
+.options {
+	transition: opacity 0.2s ease;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.attachment-options-legs {
+	left: calc(60% + 3.1rem);
+	top: 70%;
+}
+
+.attachment-options-weapon {
+	left: calc(34% - 6.3rem);
+	top: 36%;
+}
+
+.attachment-options {
+	display: flex;
+	position: absolute;
+	height: min-content;
+	width: auto;
+	height: 3rem;
+	cursor: pointer;
+}
+
+.option {
+	position: relative;
+	margin-left: 1px;
+	height: 80%;
+	width: 100%;
+	height: 100%;
+	transition: background-color 0.15s ease, margin 0.15s ease, height 0.15s ease,
+		width 0.15s ease;
+	opacity: 0.5;
+	transition: opacity 0.2s ease;
+	background-color: rgba(255, 255, 255, 0.1);
+	border: 1px solid #4e4e4e;
+}
+.option:hover {
+	opacity: 1;
+}
+
+.pegleg-svg,
+.leg-svg,
+.sword-svg,
+.axe-svg {
+	width: 30px;
+	height: 30px;
+	margin-left: 0.55rem;
+	margin-right: 0.5rem;
+	margin-top: 0.5rem;
+}
+
+.tip {
+	position: absolute;
+	left: 50%;
+	top: 1rem;
+	transform: translateX(-50%);
+	text-transform: uppercase;
+	font-family: sans-serif;
+	font-weight: 600;
+	opacity: 0.35;
+	font-size: 0.75rem;
+}
